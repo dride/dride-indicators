@@ -59,13 +59,11 @@ if __name__ == '__main__':
         strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
         strip.begin()
 
-        print 'Press Ctrl-c to quit.'
-
-        while(True):
-                # colorWipe(strip, Color(255, 255, 255))  # white wipe
-                # colorWipe(strip, Color(0, 0, 0))  # white wipe
+        print 'clearing ring...'
 
 
-                theaterChase(strip, Color(0,   0,   0))  # Red theater chase
+        theaterChase(strip, Color(0,   0,   0))  # Red theater chase
         # colorWipe (stick,Color(0,0,0)) #reset
+
+        print 'bye!'
 
