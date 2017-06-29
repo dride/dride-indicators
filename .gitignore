@@ -2,8 +2,11 @@
 logs
 *.log
 npm-debug.log*
+<<<<<<< Updated upstream
 yarn-debug.log*
 yarn-error.log*
+=======
+>>>>>>> Stashed changes
 
 # Runtime data
 pids
@@ -23,9 +26,12 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+<<<<<<< Updated upstream
 # Bower dependency directory (https://bower.io/)
 bower_components
 
+=======
+>>>>>>> Stashed changes
 # node-waf configuration
 .lock-wscript
 
@@ -33,11 +39,16 @@ bower_components
 build/Release
 
 # Dependency directories
+<<<<<<< Updated upstream
 node_modules/
 jspm_packages/
 
 # Typescript v1 declaration files
 typings/
+=======
+node_modules
+jspm_packages
+>>>>>>> Stashed changes
 
 # Optional npm cache directory
 .npm
@@ -54,5 +65,8 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+<<<<<<< Updated upstream
 # dotenv environment variables file
 .env
+=======
+>>>>>>> Stashed changes
