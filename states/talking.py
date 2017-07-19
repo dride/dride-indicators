@@ -6,7 +6,7 @@ import math
 from neopixel import *
 
 LED_COUNT       = 16
-LED_PIN         = 18 #12 / 18
+LED_PIN         = 10 #12 / 18
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 5       # DMA channel to use for generating signal (try 5)
 LED_BRIGHTNESS = 250     # Set to 0 for darkest and 255 for brightest
