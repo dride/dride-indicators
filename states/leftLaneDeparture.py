@@ -42,4 +42,4 @@ class LeftLaneDeparture(object):
 				time.sleep(0.1)
 				count += 1
 
-			self.colorWipe(Color(0, 0, 0)) #reset
+			self.self.colorWipe(Color(0, 0, 0)) #reset

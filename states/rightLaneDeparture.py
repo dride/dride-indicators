@@ -45,4 +45,4 @@ class RightLaneDeparture(object):
 
 
 
-                colorWipe (Color(0,0,0)) #reset
+                self.colorWipe(Color(0,0,0)) #reset

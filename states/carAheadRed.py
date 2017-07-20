@@ -46,6 +46,3 @@ class CarAhead(object):
 			self.lightOff(Color(0, 0, 0))  # white wipe
 
 
-
-
-			# colorWipe (stick,Color(0,0,0)) #reset

@@ -39,4 +39,4 @@ class Loading(object):
 
 
 
-			# colorWipe (stick,Color(0,0,0)) #reset
+			self.colorWipe (stick,Color(0,0,0)) #reset

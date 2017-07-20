@@ -42,6 +42,3 @@ class WakeWord(object):
 		self.colorWipe(Color(255, 255, 255))  # white wipe
 		self.colorWipe(Color(0, 0, 0))  # white wipe
 
-
-
-		# colorWipe (stick,Color(0,0,0)) #reset
