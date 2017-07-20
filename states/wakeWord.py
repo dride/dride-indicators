@@ -5,14 +5,14 @@ import time
 from neopixel import *
 
 
-class CarAhead(object):
+class WakeWord(object):
 	def __init__(self, stick):
 
 		self.stick = stick
 		self.start()
 
 	# Define functions which animate LEDs in various ways.
-	def colorWipe(self, color, wait_ms=10):
+	def colorWipe(self, color, wait_ms=20):
 		"""Wipe color across display a pixel at a time."""
 		for i in range(self.stick.numPixels()):
 			self.stick.setPixelColor(i, color)
@@ -33,19 +33,15 @@ class CarAhead(object):
 
 	def start(self):
 
-		count = 0
-		while True and count < 2:
-			count += 1
-			self.colorWipe(Color(0, 255, 0))  # white wipe
-			self.colorWipe(Color(0, 0, 0))  # white wipe
-			self.colorWipe(Color(0, 255, 0))  # white wipe
-			self.colorWipe(Color(0, 0, 0))  # white wipe
+		self.colorWipe(Color(255, 255, 255))  # white wipe
+		self.colorWipe(Color(0, 0, 0))  # white wipe
 
-			time.sleep(0.5)
+		self.colorWipe(Color(255, 255, 255))  # white wipe
+		self.colorWipe(Color(0, 0, 0))  # white wipe
 
-			self.lightOff(Color(0, 0, 0))  # white wipe
+		self.colorWipe(Color(255, 255, 255))  # white wipe
+		self.colorWipe(Color(0, 0, 0))  # white wipe
 
 
 
-
-			# colorWipe (stick,Color(0,0,0)) #reset
+		# colorWipe (stick,Color(0,0,0)) #reset
