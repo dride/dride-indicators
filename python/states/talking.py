@@ -58,6 +58,15 @@ class Talking(object):
 		self.stick.setPixelColor(14, color)
 		self.stick.show()
 
+	# Define functions which animate LEDs in various ways.
+	def colorWipe(self, color, wait_ms=100):
+		""" wipe color across display pixel a time """
+
+		for i in range(0, 25):
+			self.stick.setPixelColor(i, color)
+			self.stick.show()
+
+
 	def start(self):
 		self.stick.begin()
 		count = 0
@@ -70,3 +79,5 @@ class Talking(object):
 			time.sleep(0.1)
 			self.talking(Color(0, 0, 0))  # reset
 			time.sleep(0.1)
+
+		self.colorWipe(Color(0, 0, 0))  # reset
