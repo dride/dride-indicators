@@ -16,12 +16,12 @@ class Loading(object):
 		for i in range(self.stick.numPixels()):
 			self.stick.setPixelColor(i, color)
 			self.stick.show()
-			time.sleep(wait_ms / 1000.0)
+			time.sleep(0.0)
 
 		for i in range(self.stick.numPixels()):
 			self.stick.setPixelColor(i, Color(0, 0, 0))
 			self.stick.show()
-			time.sleep(wait_ms / 1000.0)
+			time.sleep(0.5)
 
 	def dimColor(self, color):
 		""" Color is an 32-bit int that merges the values into one """
@@ -35,7 +35,3 @@ class Loading(object):
 			count += 1
 			self.colorWipe(Color(255, 255, 255))
 
-
-
-
-			self.colorWipe (stick,Color(0,0,0)) #reset
