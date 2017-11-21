@@ -17,7 +17,7 @@ class Indicators(object):
 		LED_PIN = 10
 		LED_FREQ_HZ = 800000  # LED signal frequency in hertz (usually 800khz)
 		LED_DMA = 5  # DMA channel to use for generating signal (try 5)
-		LED_BRIGHTNESS = 250  # Set to 0 for darkest and 255 for brightest
+		LED_BRIGHTNESS = 120  # Set to 0 for darkest and 255 for brightest
 		LED_INVERT = False  # True to invert the signal
 
 		self.stick = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)

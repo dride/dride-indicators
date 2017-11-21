@@ -4,7 +4,6 @@ import time
 
 from neopixel import *
 
-
 class WakeWord(object):
 	def __init__(self, stick):
 

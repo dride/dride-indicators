@@ -4,7 +4,6 @@ import time
 
 from neopixel import *
 
-
 class CarAhead(object):
 	def __init__(self, stick):
 

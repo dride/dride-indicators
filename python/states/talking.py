@@ -5,7 +5,6 @@ import math
 
 from neopixel import *
 
-
 class Talking(object):
 	def __init__(self, stick):
 		self.stick = stick
