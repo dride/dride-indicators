@@ -9,7 +9,6 @@ class Loading(object):
 	def __init__(self, stick):
 
 		self.stick = stick
-		self.start()
 
 	def colorWipe(self, color, wait_ms=100):
 		""" wipe color across display pixel a time """

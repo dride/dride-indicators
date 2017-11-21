@@ -1,14 +1,21 @@
-import time
 from neopixel import *
 
+from adas import Adas
+from carAheadRed import CarAhead
 from leftLaneDeparture import LeftLaneDeparture
+from loading import Loading
+from standalone.buttonPress import ButtonPress
 from rightLaneDeparture import RightLaneDeparture
 from talking import Talking
-from adas import Adas
 from wakeWord import WakeWord
-from carAheadRed import CarAhead
-from loading import Loading
-from buttonPress import ButtonPress
+
+from standalone.isWaiting import IsWaiting
+from standalone.isDownloading import IsDownloading
+from standalone.isPaired import IsPaired
+from standalone.needToPair import NeedToPair
+from standalone.needToLogin import NeedToLogin
+from standalone.uploadSuccessfully import UploadSuccessfully
+from standalone.done import Done
 
 
 class Indicators(object):
@@ -27,46 +34,79 @@ class Indicators(object):
 	# Define functions which animate LEDs in various ways.
 	def colorWipe(self):
 		""" wipe color across display pixel a time """
-
+		self.done()
 		for i in range(0, self.stick.numPixels()):
 			self.stick.setPixelColor(i, Color(0, 0, 0))
 			self.stick.show()
 
 	def leftLaneDeparture(self):
-		self.leftLaneDeparture = LeftLaneDeparture(self.stick)
 		self.colorWipe()
-
+		LeftLaneDeparture(self.stick).start()
 
 	def rightLaneDeparture(self):
-		self.rightLaneDeparture = RightLaneDeparture(self.stick)
 		self.colorWipe()
+		RightLaneDeparture(self.stick).start()
 
 
 	def talking(self):
-		self.talking = Talking(self.stick)
 		self.colorWipe()
+		Talking(self.stick).start()
 
 
 	def adas(self):
-		self.adas = Adas(self.stick)
 		self.colorWipe()
+		Adas(self.stick).start()
 
 
 	def wakeWord(self):
-		self.wake = WakeWord(self.stick)
 		self.colorWipe()
+		WakeWord(self.stick).start()
 
 
 	def carAhead(self):
-		self.carAhead = CarAhead(self.stick)
 		self.colorWipe()
+		CarAhead(self.stick).start()
 
 	def loading(self):
-		self.loading = Loading(self.stick)
 		self.colorWipe()
+		Loading(self.stick).start()
 
 
-	def butonPress(self):
-		self.buttonPress = ButtonPress(self.stick)
+	def buttonPress(self):
 		self.colorWipe()
+		ButtonPress(self.stick, True).start()
 
+	def buttonPressOffline(self):
+		self.colorWipe()
+		print "xxx"
+		ButtonPress(self.stick, False).start()
+
+
+	## API controled actions
+
+	def isWaiting(self):
+		self.colorWipe()
+		IsWaiting(self.stick).start()
+
+	def isDownloading(self):
+		self.colorWipe()
+		IsDownloading(self.stick).start()
+
+	def needToPair(self):
+		self.colorWipe()
+		NeedToPair(self.stick).start()
+
+	def isPaired(self):
+		self.colorWipe()
+		IsPaired(self.stick).start()
+
+	def needToLogin(self):
+		self.colorWipe()
+		NeedToLogin(self.stick).start()
+
+	def uploadSuccessfully(self):
+		self.colorWipe()
+		UploadSuccessfully(self.stick).start()
+
+	def done(self):
+		Done()

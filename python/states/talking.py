@@ -8,7 +8,6 @@ from neopixel import *
 class Talking(object):
 	def __init__(self, stick):
 		self.stick = stick
-		self.start()
 
 	def talking(self, color, wait_ms=30):
 		""" wipe color across display pixel a time """

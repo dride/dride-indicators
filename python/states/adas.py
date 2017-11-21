@@ -10,7 +10,6 @@ class Adas(object):
         def __init__(self, stick):
 
                 self.stick = stick
-                self.start()
 
         # Define functions which animate LEDs in various ways.
         def colorWipe(self, color, wait_ms=50):
