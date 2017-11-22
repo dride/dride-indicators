@@ -44,9 +44,8 @@ class NeedToLogin(object):
 		self.stick.begin()
 		count = 0
 
-		self.fade(0, 0, 0, 255, 255, 255, 0, 0, 0, 2.025)
+
+		self.fade(0, 0, 0, 0, 173, 243, 18, 0, 40, 0.025)
+		self.fade(173, 243, 18, 0,  0, 0, 0, 0, 40, 0.025)
 
 
-
-if __name__ == '__main__':
-	ButtonPress().start()
