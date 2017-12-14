@@ -4,6 +4,7 @@ from indicators import Indicators
 action = sys.argv[1]
 
 availbleActions = [
+					"error",
 					"welcome",
 					"isWaiting",
 					"isDownloading",

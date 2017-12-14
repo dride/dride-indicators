@@ -9,6 +9,7 @@ from rightLaneDeparture import RightLaneDeparture
 from talking import Talking
 from wakeWord import WakeWord
 
+from standalone.error import Error
 from standalone.welcome import Welcome
 from standalone.isWaiting import IsWaiting
 from standalone.isDownloading import IsDownloading
@@ -56,6 +57,11 @@ class Indicators(object):
 	def welcome(self):
 		self.colorWipe()
 		Welcome(self.stick).start()
+
+	def error(self):
+		self.colorWipe()
+		Error(self.stick).start()
+
 
 	def adas(self):
 		self.colorWipe()
