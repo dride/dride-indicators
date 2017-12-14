@@ -4,6 +4,7 @@ from indicators import Indicators
 action = sys.argv[1]
 
 availbleActions = [
+					"welcome",
 					"isWaiting",
 					"isDownloading",
 					"isPaired",
@@ -13,7 +14,6 @@ availbleActions = [
 					"buttonPress",
 					"buttonPressOffline",
 					"done"
-
 				]
 
 if (action in availbleActions):
